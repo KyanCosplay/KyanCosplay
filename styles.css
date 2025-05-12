@@ -1,0 +1,384 @@
+    /*Roots*/
+    :root{
+        --primary-color:  #cbb8ff;
+        --secondary-color: #edb8ff;
+        --secondary-color-light: #edb8ff68;
+        --background-color: #ebe4ff ;
+        --text-color:#33255a;
+        --light-color:#fbfbfb;
+    }
+
+    /*Fuentes*/
+    /*KenyanCoffe*/
+    @font-face {
+        font-family: 'KenyanCoffee';
+        src: url('Fuentes/Kenyan-Coffee-Rg.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'KenyanCoffee';
+        src: url('Fuentes/Kenyan-Coffee-Bd.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'KenyanCoffee';
+        src: url('Fuentes/Kenyan-Coffee-Rg-It.woff') format('woff');
+        font-weight: normal;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'KenyanCoffee';
+        src: url('Fuentes/Kenyan-Coffee-Bd-It.woff') format('woff');
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    /*Colvetica*/
+    @font-face {
+        font-family: 'Coolvetica';
+        src: url('Fuentes/Coolvetica-Rg.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Coolvetica';
+        src: url('Fuentes/Coolvetica-Rg-It.woff') format('woff');
+        font-weight: normal;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'Coolvetica';
+        src: url('Fuentes/Coolvetica-Rg-Cond.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Coolvetica';
+        src: url('Fuentes/Coolvetica-Hv-Comp.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /*Caracteristicas Generales*/
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'KenyanCoffee', sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        color: var(--text-color);
+        background-color: var(--background-color);
+    }
+
+    body{
+        font-size: 1.2rem;
+        line-height: 1.5;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background-color);
+        max-width: 100%;
+    }
+
+    a{
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+
+    /*Navegador*/
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: var(--primary-color);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    nav img{
+        width: 6rem;
+    }
+    .navbar{
+        padding: 0rem 5%;
+    }
+    .nav-list{
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    .nav-list li a{
+        font-size: 1.2rem;
+        color: var(--text-color);
+        transition: all 0.3s ease-in-out;
+    }
+    .nav-list li a:hover{
+        color: var(--background-color);
+    }
+
+    .sesion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .sesion button{
+        background-color: var(--background-color);
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        color: var(--text-color);
+    }
+
+
+
+    .slider{
+        width: 100%;
+        margin: auto;
+        box-shadow: 0px 0px 10px #33255a;    
+    }
+    /* Estilos básicos del slider */
+    #slider-container {
+        position: relative;
+        width: 100%;
+        height: 500px; /* Ajusta la altura del slider según sea necesario */
+        overflow: hidden; /* Oculta las imágenes fuera del contenedor */
+    }
+
+    /* Contenedor de las imágenes */
+    .slider_images {
+        display: flex; /* Coloca las imágenes en una fila */
+        transition: transform 0.5s ease; /* Efecto de transición suave */
+    }
+
+    /* Estilos para las imágenes dentro del slider */
+    .slider_images img {
+        width: 100vw; /* Cada imagen ocupa el 100% del ancho de la ventana */
+        height: auto;  /* Mantiene la proporción de las imágenes */
+        display: block; /* Evita el espacio en blanco debajo de la imagen */
+    }
+
+    /* Estilos para los puntos de navegación */
+    .slider_navegation {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+    }
+
+    .slider_nav {
+        width: 15px;
+        height: 15px;
+        margin: 0 5px;
+        background-color: rgba(255, 255, 255, 0.884);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        
+    }
+
+    .slider_nav.active {
+        background-color: var(--secondary-color);
+    }
+
+    .slider_nav:hover {
+        background-color: var(--secondary-color);
+    }
+
+    .slider_slide {
+        position: relative;
+        width: 100vw;
+        flex-shrink: 0;
+    }
+    .slider_overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 40%;
+        background: rgba(0, 0, 0, 0.6); /* Oscurecer más */
+        color: white;
+        text-align: left;
+        z-index: 2;
+        padding: 2rem;
+        padding-bottom: 28.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        box-sizing: border-box;
+    }
+
+    .slider_overlay h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-family: 'Coolvetica', sans-serif;
+        text-shadow: 0px 4px 8px rgba(0,0,0,0.6);
+        line-height: 1.2;
+    }
+    .slider_overlay p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem; /* Separación entre texto y botón */
+        line-height: 1.6;
+        font-family: 'Arial', sans-serif;
+        color: #dcdcdc;
+    }
+
+    .slider_button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        font-size: 1.1rem;
+        border-radius: 30px;
+        font-family: 'KenyanCoffee', sans-serif;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        max-width: fit-content;
+        white-space: nowrap;
+        margin-top: 1rem; /* Espacio adicional entre texto y botón */
+    }
+
+
+    .slider_button:hover {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+
+    /*Estilos de la barra de desplazamiento*/
+    ::-webkit-scrollbar {
+        width: 8px; /* Ancho de la barra de desplazamiento */
+    }   
+    ::-webkit-scrollbar-track {
+        background: var(--background-color); /* Color de la pista */
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--secondary-color); /* Color del pulgar */
+        border-radius: 10px; /* Bordes redondeados */
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-color); /* Color del pulgar al pasar el mouse */
+    }
+
+    /*Redundancia*/
+
+    section h2 {
+        font-size: 2.5rem;
+    }
+
+    section p {
+        font-size: 1.2rem;
+        margin: 1.5rem 0;
+        color: var(--text-color);
+    }
+
+    /*Bienvenido*/
+    .hero{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin:1rem 8.6rem;
+        padding: 2rem 0;
+    }
+
+    /*Cosplays*/
+    .cosplays{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 3.6rem 8.6rem;
+        background-color: var(--light-color);
+    }
+
+    .tarjetacosplays{
+        background-color: var(--secondary-color-light);
+        margin-bottom: 2rem;
+        padding: 1.6rem;
+    }
+
+    .images_cosplays{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .images_cosplays img{
+        width: 16rem;
+        box-shadow: 0px 0px 5px #33255a;    
+        
+    }
+
+    .tarjetacosplays img::after{
+        content: '';
+        background: inherit;
+        position: absolute;
+        filter: blur(25px) saturate(1.5);
+        width: 16rem;
+        scale: 1.05;
+        z-index: 1;
+    }
+
+
+    /*Pelucas*/
+    .pelucas{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 3.6rem 8.6rem;
+    }
+
+    /*Articulos*/
+    .articulos{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 3.6rem 8.6rem;
+        background-color: var(--light-color);
+    }
+
+    /*Talleres*/
+    .talleres{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 3.6rem 8.6rem;
+    }
+
+    /*Servicios Personalizados*/
+    .servicios_personalizados{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 3.6rem 8.6rem; 
+        background-color: var(--light-color);
+    }
+
+    /*Footer*/
+
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+        background-color: var(--primary-color);
+        color: var(--text-color);
+    }
+
+    footer img{
+        width: 5rem;
+        margin-right: 0;
+    }
