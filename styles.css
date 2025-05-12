@@ -87,7 +87,9 @@
         text-decoration: none;
         color: var(--text-color);
     }
-
+    a:hover{
+        color: var(--background-color);
+    }
 
     /*Navegador*/
     nav{
@@ -371,14 +373,34 @@
 
     footer{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+        gap:3.3rem;
         padding: 1rem 0;
         background-color: var(--primary-color);
         color: var(--text-color);
     }
+            
 
     footer img{
         width: 5rem;
         margin-right: 0;
+    }
+
+    footer iframe{
+        border-radius: 0.5rem;
+        box-shadow: 0px 0px 9px #f4d4ff;
+    }
+
+    .footer_left{
+        max-width: 20%;
+    }
+
+    .redes-sociales img{
+        width: 1.5rem;
+    }
+
+    .footer_right a{
+        display: flex;
+        margin-bottom: -0.5rem;
     }
