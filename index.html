@@ -10,30 +10,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div data-include="paginas/plantillas/header.html"></div>
-        <section class="slider" id="slider-container">
-            <div class="slider_images" id="slider-js"></div>
-        
-            <!-- Botones de navegación -->
-            <div class="slider_arrows">
-                <span id="prev" class="slider_arrow">❮</span>
-                <span id="next" class="slider_arrow">❯</span>
-            </div>
-        
-            <!-- Puntos de navegación -->
-            <div class="slider_navegation" id="slider-navegation">
-                <span class="slider_nav" data-index="0"></span>
-                <span class="slider_nav" data-index="1"></span>
-                <span class="slider_nav" data-index="2"></span>
-            </div>
-        </section>
-    </header>
     <main>
+        <nav>
+            <img src="../Images/Logos/LOGO_BlancoLetras.png" title="Logo Kyan" alt="Logo Kyan">
+            <div class="navbar">
+                <ul class="nav-list">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/paginas/nosotros.html">Nosotros</a></li>
+                    <li><a href="/paginas/cosplays.html">Cosplays</a></li>
+                    <li><a href="talleres.html">Talleres</a></li>
+                    <li><a href="serviciospersonalizados.html">Servicios personalizados</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="sesion">
+                <button>
+                    <a href="login.html">Iniciar Sesión</a>
+                </button>
+                <button>
+                    <a href="register.html">Registro</a>
+                </button>
+            </div>
+        </nav>
+        <header>
+            <section class="slider" id="slider-container">
+                <div class="slider_images" id="slider-js"></div>
         
+                <!-- Botones de navegación -->
+                <div class="slider_arrows">
+                    <span id="prev" class="slider_arrow">❮</span>
+                    <span id="next" class="slider_arrow">❯</span>
+                </div>
         
-        
-
+                <!-- Puntos de navegación -->
+                <div class="slider_navegation" id="slider-navegation">
+                    <span class="slider_nav" data-index="0"></span>
+                    <span class="slider_nav" data-index="1"></span>
+                    <span class="slider_nav" data-index="2"></span>
+                </div>
+            </section>
+        </header>
         <section class="hero">
             <h2>Bienvenido a Kyan Cosplay</h2>
             <p>La tienda de cosplay mas cercana, en la que te acompañamos en tu selección y compartimos los mismos gustos.
@@ -45,17 +62,17 @@
         <section class="cosplays">
             <h2>Cosplays</h2>
             <div class="images_cosplays">
-                <div class="tarjetacosplays" class="cosplayNaruto" >
+                <div class="tarjetas" class="cosplayNaruto" >
                     <img src="Images/Cosplays/Cosplay_Naruto.jpg" alt="Cosplay de Naruto" title="Cosplay Naruto">
                     <p class="nombre">Cosplay de Naruto</p>
                     <p class="precio">45,99€</p>
                 </div>
-                <div class="tarjetacosplays" class="cosplayDabi" >
+                <div class="tarjetas" class="cosplayDabi" >
                     <img src="Images/Cosplays/CosplayDabi.jpg" alt="Cosplay de Dabi" title="Cosplay Dabi">
                     <p class="nombre">Cosplay de Dabi</p>
                     <p class="precio">45,99€</p>
                 </div>
-                <div class="tarjetacosplays" class="cosplayJinx">
+                <div class="tarjetas" class="cosplayJinx">
                     <img src="Images/Cosplays/CosplayJinx.jpg" alt="Cosplay de Jinx" title="Cosplay Jinx">
                     <p class="nombre">Cosplay de Jinx</p>
                     <p class="precio">45,99€</p>
@@ -66,6 +83,24 @@
 
         <section class="pelucas">
             <h2>Pelucas</h2>
+            <div class="images_pelucas">
+                <div class="tarjetas" class="pelucaAzul" >
+                    <img src="Images/Pelucas/peluca_azul.jpg" alt="Peluca Azul" title="Peluca Azul">
+                    <p class="nombre">Peluca Azul</p>
+                    <p class="precio">20,99€</p>
+                </div>
+                <div class="tarjetas" class="rekiKyan" >
+                    <img src="Images/Pelucas/peluca_reki_kyan_sk8.jpg" alt="Peluca de Reki Kyan" title="Peluca de Reki Kyan">
+                    <p class="nombre">Peluca de Reki Kyan de SK8</p>
+                    <p class="precio">13,99€</p>
+                </div>
+                <div class="tarjetas" class="columbina">
+                    <img src="Images/Pelucas/peluca_columbina_genshin_impact.jpg" alt="Peluca de Columbina de Genshin Impact" title="Peluca de Columbina">
+                    <p class="nombre">Peluca de Columbina de Genshin Impact</p>
+                    <p class="precio">19,99€</p>
+                </div>
+            </div>
+            <a href="paginas/pelucas.html" class="btn">Ver más Pelucas</a>
         </section>
 
         <section class="articulos">

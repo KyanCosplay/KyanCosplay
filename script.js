@@ -8,7 +8,7 @@ let images = [
         buttonLink: 'html/cosplays.html'
     },
     {
-        src: 'Images/Home/CosplayVikinga.jpg',
+        src: 'Images/Home/taller_costura.jpg',
         text: 'Talleres',
         additionalText: 'Aqui puedes informarte sobre como apuntarte a los talleres de cosplay.',
         buttonText: 'Descubre',
