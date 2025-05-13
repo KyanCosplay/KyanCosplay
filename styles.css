@@ -407,17 +407,44 @@
         box-shadow: 0px 0px 5px #33255a;    
     }
 
-    /*Servicios Personalizados*/
-    .servicios_personalizados{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 3.6rem 3.2rem; 
-        background-color: var(--light-color);
-    }
-    .servicios_personalizados a:hover {
-        color: var(--background-color);
-    }
+.servicios_personalizados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3.6rem 3.2rem;
+    min-height: 50vh;
+    background-image: url("Images/ServiciosPersonalizados/personalizado_telas.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+
+.servicios_personalizados::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* capa oscura para mejorar legibilidad */
+    z-index: -1;
+}
+
+/* Estilo del contenido para que sea legible */
+.servicios_personalizados * {
+    color: var(--color-text, #ffffff); /* usa tu variable o blanco por defecto */
+    max-width: 40%;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+.servicios_personalizados a:hover {
+    color: var(--background-color, #fff);
+}
 
     /*Footer*/
 
@@ -435,6 +462,13 @@
     footer img{
         width: 8.6rem;
         margin-right: 0;
+        padding: 0.35rem;
+        border-radius: 0.95rem;
+        transition: all 0.3s ease;
+    }
+    footer img:hover{
+        background-color: var(--light-color);
+        scale: 1.1;
     }
 
     footer iframe{
