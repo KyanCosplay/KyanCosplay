@@ -286,11 +286,24 @@
         margin: 1.5rem 0;
         color: var(--text-color);
     }
+    section a {
+        max-width: 10%;
+    }
+    section a:hover {
+        color: var(--light-color);
+    }
+
+
+
 
     .tarjetas{
         background-color: var(--secondary-color-light);
         margin-bottom: 2rem;
         padding: 1.6rem;
+    }
+
+    .nombre {
+        margin-bottom: 3.29rem;
     }
 
     /*Bienvenido*/
@@ -307,8 +320,11 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding: 3.6rem 9rem;
+        padding: 3.6rem 3.2rem;
         background-color: var(--light-color);
+    }
+    .cosplays a:hover {
+        color: var(--background-color);
     }
 
     .images_cosplays{
@@ -319,7 +335,7 @@
         margin-top: 2rem;
     }
     .images_cosplays img{
-        width: 16rem;
+        width: 13.6rem;
         box-shadow: 0px 0px 5px #33255a;    
     }
 
@@ -329,8 +345,9 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding: 3.6rem 9rem;
+        padding: 3.6rem 3.2rem;
     }
+
     .images_pelucas{
         display: flex;
         justify-content: center;
@@ -339,17 +356,32 @@
         margin-top: 2rem;
     }
     .images_pelucas img{
-        width: 16rem;
+        width: 13.6rem;
         box-shadow: 0px 0px 5px #33255a;    
     }
 
     /*Articulos*/
-    .articulos{
+    .accesorios{
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding: 3.6rem 9rem;
+        padding: 3.6rem 3.2rem;
         background-color: var(--light-color);
+    }
+    .images_accesorios{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .images_accesorios img{
+        width: 13.6rem;
+        box-shadow: 0px 0px 5px #33255a;    
+    }
+
+    .accesorios a:hover {
+        color: var(--background-color);
     }
 
     /*Talleres*/
@@ -357,7 +389,18 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding: 3.6rem 9rem;
+        padding: 3.6rem 3.2rem;
+    }
+    .images_talleres{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .images_talleres img{
+        width: 13.6rem;
+        box-shadow: 0px 0px 5px #33255a;    
     }
 
     /*Servicios Personalizados*/
@@ -365,7 +408,7 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding: 3.6rem 9rem; 
+        padding: 3.6rem 3.2rem; 
         background-color: var(--light-color);
     }
 
@@ -383,7 +426,7 @@
             
 
     footer img{
-        width: 5rem;
+        width: 8.6rem;
         margin-right: 0;
     }
 
@@ -398,9 +441,11 @@
 
     .redes-sociales img{
         width: 1.5rem;
+        margin-right: 1.6rem;
     }
 
     .footer_right a{
         display: flex;
         margin-bottom: -0.5rem;
+        max-width: 100%;
     }

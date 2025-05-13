@@ -5,21 +5,21 @@ let images = [
         text: 'Cosplay',
         additionalText: 'Te enseñamos todos los cosplays que tenemos disponibles y los que estan por venir.',
         buttonText: 'Ver más',
-        buttonLink: 'html/cosplays.html'
+        buttonLink: 'paginas/cosplays.html'
     },
     {
         src: 'Images/Home/taller_costura.jpg',
         text: 'Talleres',
         additionalText: 'Aqui puedes informarte sobre como apuntarte a los talleres de cosplay.',
         buttonText: 'Descubre',
-        buttonLink: 'https://ejemplo.com/evento'
+        buttonLink: 'paginas/talleres.html'
     },
     {
-        src: 'Images/Home/CosplayVikinga.jpg',
+        src: 'Images/ServiciosPersonalizados/tijeraspersonalizado.jpg',
         text: 'Servicios Personalizados',
         additionalText: 'En caso que no tengas tiempo para hacerte tu propio cosplay, te ofrecemos nuestro servicio personalizado.',
         buttonText: 'Explora',
-        buttonLink: 'https://ejemplo.com/coleccion'
+        buttonLink: 'paginas/serviciospersonalizados.html'
     }
 ];
 
