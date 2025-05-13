@@ -442,10 +442,24 @@
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
     z-index: 2;
 }
-.servicios_personalizados a:hover {
-    color: var(--background-color, #fff);
+.servicios_personalizados button {
+    background-color: var(--secondary-color);
+    padding: 0.75rem 1.5rem;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    font-family: 'KenyanCoffee', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.6s ease;
+    max-width: fit-content;
+    white-space: nowrap;   
 }
-
+.servicios_personalizados button:hover {
+    background-color: var(--text-color);
+    scale: 1.05;
+}
     /*Footer*/
 
     footer{
@@ -485,8 +499,22 @@
         margin-right: 1.6rem;
     }
 
+    .nosotros_footer{
+        padding-bottom: 2.6rem;
+        border-bottom: solid 2px var(--text-color);
+    }
+    .legal{
+        padding-top: 2.6rem;
+    }
+
     .footer_right a{
         display: flex;
         margin-bottom: -0.5rem;
         max-width: 100%;
+    }
+
+    footer  a   {
+        color: var(--text-color);
+        font-size: 1.2rem;
+        transition: all 0.4s ease-in-out;
     }
