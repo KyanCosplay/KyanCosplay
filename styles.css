@@ -118,6 +118,7 @@ nav img{
     color: var(--background-color);
 }
     
+
 /*Cesta*/
 .contador-cesta {
   position: absolute;
@@ -169,7 +170,6 @@ nav img{
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  margin-bottom: 5rem;
   padding: 2.5rem 3rem 0 3rem;
   overflow: hidden;
   position: relative;
@@ -181,6 +181,7 @@ nav img{
   overflow-y: auto;
   margin-bottom: 33px; /* Espacio para que no se escondan detrás del botón */
   padding-right: 5px;
+  margin-top: 90%;
 }
 
 /* Fondo blanco detrás del botón */
@@ -360,10 +361,15 @@ nav img{
     max-width: fit-content;
     white-space: nowrap;
     margin-top: 1rem; /* Espacio adicional entre texto y botón */
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 5px #33255a;
+    cursor: pointer;
+    border: none;
 }
 .slider_button:hover {
     background-color: var(--primary-color);
     color: white;
+    scale: 1.05;
 }
 /*Estilos de la barra de desplazamiento*/
 ::-webkit-scrollbar {
@@ -439,12 +445,13 @@ section a:hover {
 
 /* Botón Saber más */
 .btn-saber-mas {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
+  background-color: var(--button-color-cesta);
+  color: var(--light-color);
 }
 
 .btn-saber-mas:hover {
   background-color: var(--primary-color);
+  color: var(--text-color);
   transform: scale(1.05);
 }
 
@@ -588,7 +595,8 @@ section a:hover {
     white-space: nowrap;   
 }
 .servicios_personalizados button:hover {
-    background-color: var(--text-color);
+    background-color: var(--button-color-cesta);
+    color: var(--light-color);
     scale: 1.05;
 }
 

@@ -194,71 +194,25 @@ document.querySelectorAll('.btn-saber-mas').forEach(btn => {
   });
 });
 
-// === CARRITO ===
-const cestaBtn = document.getElementById('cestaBtn');
-const modalCesta = document.getElementById('modalCesta');
-const cerrarModalIcono = document.getElementById('cerrarModalIcono');
-const listaProductos = document.getElementById('listaProductos');
-const contadorCesta = document.getElementById('contadorCesta');
-const btnComprar = document.getElementById('btnComprar');
+// No mostrar la cesta al cargar la página
+modalCesta.style.display = 'none';
 
-let productosEnCesta = cargarCestaDesdeLocalStorage();
-
-function añadirProducto(nombre, imagen) {
-  productosEnCesta.push({ nombre, imagen });
-  guardarCestaEnLocalStorage();
-  actualizarCesta();
-}
-
-function actualizarCesta() {
-  contadorCesta.textContent = productosEnCesta.length;
-
-  listaProductos.innerHTML = '';
-  productosEnCesta.forEach((producto) => {
-    const item = document.createElement('div');
-    item.classList.add('producto-item');
-
-    const img = document.createElement('img');
-    img.src = producto.imagen;
-    img.alt = producto.nombre;
-    img.classList.add('producto-img');
-
-    const nombre = document.createElement('span');
-    nombre.textContent = producto.nombre;
-    nombre.classList.add('producto-nombre');
-
-    item.appendChild(img);
-    item.appendChild(nombre);
-    listaProductos.appendChild(item);
-  });
-}
-
-function guardarCestaEnLocalStorage() {
-  localStorage.setItem('cestaProductos', JSON.stringify(productosEnCesta));
-}
-
-function cargarCestaDesdeLocalStorage() {
-  const datos = localStorage.getItem('cestaProductos');
-  return datos ? JSON.parse(datos) : [];
-}
-
-// Iniciar
-actualizarCesta();
-
-// Eventos
-cestaBtn.addEventListener('click', () => {
-  modalCesta.style.display = 'flex';
+// Abrir la cesta al hacer clic en el botón
+cestaBtn.addEventListener('click', (e) => {
+  e.stopPropagation(); // Prevenir que el clic propague al document
+  modalCesta.style.display = 'block';
 });
 
+// Cerrar la cesta al hacer clic en el icono de cerrar
 cerrarModalIcono.addEventListener('click', () => {
   modalCesta.style.display = 'none';
 });
 
-btnComprar.addEventListener('click', () => {
-  alert('Gracias por tu compra ❤️');
-  productosEnCesta = [];
-  guardarCestaEnLocalStorage();
-  actualizarCesta();
-  modalCesta.style.display = 'none';
+// Cerrar la cesta al hacer clic fuera de ella
+document.addEventListener('click', (e) => {
+  const clickFuera = !modalCesta.contains(e.target) && !cestaBtn.contains(e.target);
+  if (modalCesta.style.display === 'block' && clickFuera) {
+    modalCesta.style.display = 'none';
+  }
 });
 
