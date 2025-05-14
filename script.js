@@ -261,3 +261,4 @@ btnComprar.addEventListener('click', () => {
   actualizarCesta();
   modalCesta.style.display = 'none';
 });
+
