@@ -1,23 +1,39 @@
     <link rel="stylesheet" href="styles.css">
-    <nav>
-        <img src="../Images/Logos/LOGO_BlancoLetras.png" title="Logo Kyan" alt="Logo Kyan">
-        <div class="navbar">
-            <ul class="nav-list">
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/paginas/nosotros.html">Nosotros</a></li>
-                <li><a href="/paginas/cosplays.html">Cosplays</a></li>
-                <li><a href="talleres.html">Talleres</a></li>
-                <li><a href="serviciospersonalizados.html">Servicios personalizados</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </div>
-        <div class="sesion">
-            <button>
-                <a href="login.html">Iniciar Sesión</a>
-            </button>
-            <button>
-                <a href="register.html">Registro</a>
-            </button>
-        </div>
-    </nav>
+        <nav>
+            <img src="Images/Logos/LOGO_BlancoLetras.png" title="Logo Kyan" alt="Logo Kyan" loading="lazy">
+            <div class="navbar">
+                <ul class="nav-list">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/paginas/nosotros.html">Nosotros</a></li>
+                    <li><a href="#cosplays">Cosplays</a></li> <!--Pelucas y accesorios en Desplegable-->
+                    <li><a href="#talleres">Talleres</a></li>
+                    <li><a href="/paginas/serviciopersonalizado.html">Servicios personalizados</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="cesta" id="cestaBtn">
+              <img src="Images/Iconos/BolsaCompra.png" alt="Cesta de la compra" title="Cesta de la compra" loading="lazy">
+              <span class="contador-cesta" id="contadorCesta">0</span>
+            </div>
+
+            <!-- Modal de la cesta -->
+            <div id="modalCesta" class="modal-cesta">
+              <div class="modal-contenido">
+                <span id="cerrarModalIcono" class="cerrar-icono">&times;</span>
+                <h2>Tu Cesta</h2>
+                <div id="listaProductos" class="lista-productos"></div>
+                <button id="btnComprar" class="btn-comprar">Comprar</button>
+              </div>
+            </div>
+
+
+            <div class="sesion">
+                <button>
+                    <a href="login.html">Iniciar Sesión</a>
+                </button>
+                <button>
+                    <a href="register.html">Registro</a>
+                </button>
+            </div>
+        </nav>
