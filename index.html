@@ -12,7 +12,7 @@
 <body>
     <main>
         <nav>
-            <img src="Images/Logos/LOGO_BlancoLetras.png" title="Logo Kyan" alt="Logo Kyan">
+            <img src="Images/Logos/LOGO_BlancoLetras.png" title="Logo Kyan" alt="Logo Kyan" loading="lazy">
             <div class="navbar">
                 <ul class="nav-list">
                     <li><a href="/index.html">Inicio</a></li>
@@ -24,6 +24,22 @@
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
+            <div class="cesta" id="cestaBtn">
+              <img src="Images/Iconos/BolsaCompra.png" alt="Cesta de la compra" title="Cesta de la compra" loading="lazy">
+              <span class="contador-cesta" id="contadorCesta">0</span>
+            </div>
+
+            <!-- Modal de la cesta -->
+            <div id="modalCesta" class="modal-cesta">
+              <div class="modal-contenido">
+                <span id="cerrarModalIcono" class="cerrar-icono">&times;</span>
+                <h2>Tu Cesta</h2>
+                <div id="listaProductos" class="lista-productos"></div>
+                <button id="btnComprar" class="btn-comprar">Comprar</button>
+              </div>
+            </div>
+
+
             <div class="sesion">
                 <button>
                     <a href="login.html">Iniciar Sesión</a>
@@ -61,28 +77,48 @@
 
         <section id="cosplays" class="cosplays">
             <h2>Cosplays</h2>
-            <div class="images_cosplays">
-                <div class="tarjetas" class="cosplayNaruto" >
-                    <img src="Images/Cosplays/Cosplay_Naruto.jpg" alt="Cosplay de Naruto" title="Cosplay Naruto">
+                <div class="images_cosplays">
+                  <div class="tarjetas cosplayNaruto">
+                    <img src="Images/Cosplays/Cosplay_Naruto.jpg" alt="Cosplay de Naruto" title="Cosplay Naruto" loading="lazy">
                     <p class="nombre">Cosplay de Naruto</p>
                     <p class="precio">45,00€</p>
-                </div>
-                <div class="tarjetas" class="cosplayJoker" >
-                    <img src="Images/Cosplays/CosplayJoker.jpg" alt="Cosplay de Joker" title="Cosplay Joker">
+                    <div class="botones-producto">
+                      <button class="btn-saber-mas">Saber más</button>
+                      <button class="btn-anadir" data-nombre="Cosplay de Naruto">Añadir a la cesta</button>
+                    </div>
+                  </div>
+              
+                  <div class="tarjetas cosplayJoker">
+                    <img src="Images/Cosplays/CosplayJoker.jpg" alt="Cosplay de Joker" title="Cosplay Joker" loading="lazy">
                     <p class="nombre">Cosplay del Joker</p>
                     <p class="precio">59,99€</p>
-                </div>
-                <div class="tarjetas" class="cosplayJinx">
-                    <img src="Images/Cosplays/CosplayJinx.jpg" alt="Cosplay de Jinx" title="Cosplay Jinx">
+                    <div class="botones-producto">
+                      <button class="btn-saber-mas">Saber más</button>
+                      <button class="btn-anadir" data-nombre="Cosplay del Joker">Añadir a la cesta</button>
+                    </div>
+                  </div>
+              
+                  <div class="tarjetas cosplayJinx">
+                    <img src="Images/Cosplays/CosplayJinx.jpg" alt="Cosplay de Jinx" title="Cosplay Jinx" loading="lazy">
                     <p class="nombre">Cosplay de Jinx</p>
                     <p class="precio">90€</p>
-                </div>
-                <div class="tarjetas" class="cosplayDabi" >
-                    <img src="Images/Cosplays/CosplayDabi.jpg" alt="Cosplay de Dabi" title="Cosplay Dabi">
+                    <div class="botones-producto">
+                      <button class="btn-saber-mas">Saber más</button>
+                      <button class="btn-anadir" data-nombre="Cosplay de Jinx">Añadir a la cesta</button>
+                    </div>
+                  </div>
+              
+                  <div class="tarjetas cosplayDabi">
+                    <img src="Images/Cosplays/CosplayDabi.jpg" alt="Cosplay de Dabi" title="Cosplay Dabi" loading="lazy">
                     <p class="nombre">Cosplay de Dabi</p>
                     <p class="precio">69,99€</p>
+                    <div class="botones-producto">
+                      <button class="btn-saber-mas">Saber más</button>
+                      <button class="btn-anadir" data-nombre="Cosplay de Dabi">Añadir a la cesta</button>
+                    </div>
+                  </div>
                 </div>
-            </div>
+
             <a href="paginas/cosplays.html" class="btn">Ver más Cosplays</a>
         </section>
 
@@ -90,22 +126,26 @@
             <h2>Pelucas</h2>
             <div class="images_pelucas">
                 <div class="tarjetas" class="pelucaAzul" >
-                    <img src="Images/Pelucas/peluca_azul.jpg" alt="Peluca Azul" title="Peluca Azul">
+                    <img src="Images/Pelucas/peluca_azul.jpg" alt="Peluca Azul" title="Peluca Azul"  loading="lazy">
                     <p class="nombre">Peluca Azul</p>
                     <p class="precio">20,99€</p>
+                        <div class="botones-producto">
+                          <button class="btn-saber-mas">Saber más</button>
+                          <button class="btn-anadir" data-nombre="Peluca">Añadir a la cesta</button>
+                        </div>
                 </div>
                 <div class="tarjetas" class="rekiKyan" >
-                    <img src="Images/Pelucas/peluca_reki_kyan_sk8.jpg" alt="Peluca de Reki Kyan" title="Peluca de Reki Kyan">
+                    <img src="Images/Pelucas/peluca_reki_kyan_sk8.jpg" alt="Peluca de Reki Kyan" title="Peluca de Reki Kyan" loading="lazy">
                     <p class="nombre">Peluca de Reki Kyan de SK8</p>
                     <p class="precio">13,99€</p>
                 </div>
                 <div class="tarjetas" class="columbina">
-                    <img src="Images/Pelucas/peluca_columbina_genshin_impact.jpg" alt="Peluca de Columbina de Genshin Impact" title="Peluca de Columbina">
+                    <img src="Images/Pelucas/peluca_columbina_genshin_impact.jpg" alt="Peluca de Columbina de Genshin Impact" title="Peluca de Columbina" loading="lazy">
                     <p class="nombrelargo">Peluca de Columbina de Genshin Impact</p>
                     <p class="precio">19,99€</p>
                 </div>
                 <div class="tarjetas" class="pelucaAzul" >
-                    <img src="Images/Pelucas/peluca_naranja_hinata_haikyuu.jpg" alt="Peluca de Hinata de Haikyuu" title="Peluca de Hinata">
+                    <img src="Images/Pelucas/peluca_naranja_hinata_haikyuu.jpg" alt="Peluca de Hinata de Haikyuu" title="Peluca de Hinata" loading="lazy">
                     <p class="nombre">Peluca de Hinata de Haikyuu</p>
                     <p class="precio">20,99€</p>
                 </div>
@@ -117,22 +157,22 @@
             <h2>Accesorios</h2>
             <div class="images_accesorios">
                 <div class="tarjetas" class="lentillasAzul" >
-                    <img src="Images/Accesorios/lentillas_azules.jpg" alt="Lentillas Azules" title="Lentillas Azules">
+                    <img src="Images/Accesorios/lentillas_azules.jpg" alt="Lentillas Azules" title="Lentillas Azules"  loading="lazy">
                     <p class="nombre">Lentillas Azules</p>
                     <p class="precio">20,00€</p>
                 </div>
                 <div class="tarjetas" class="orejaselfo" >
-                    <img src="Images/Accesorios/orejas_elfo_colores.jpg" alt="Orejas de Elfos de colores" title="Orejas Elfos">
+                    <img src="Images/Accesorios/orejas_elfo_colores.jpg" alt="Orejas de Elfos de colores" title="Orejas Elfos" loading="lazy">
                     <p class="nombre">Orejas Elfo</p>
                     <p class="precio">7,99€</p>
                 </div>
                 <div class="tarjetas" class="pestañas">
-                    <img src="Images/Accesorios/pestanyas.jpg" alt="Pestañas" title="Pestañas">
+                    <img src="Images/Accesorios/pestanyas.jpg" alt="Pestañas" title="Pestañas" loading="lazy">
                     <p class="nombre">Pestañas</p>
                     <p class="precio">4,50€</p>
                 </div>
                 <div class="tarjetas" class="wigcap" >
-                    <img src="Images/Accesorios/wigcaps.jpg" alt="Wigcap" title="Wigcap">
+                    <img src="Images/Accesorios/wigcaps.jpg" alt="Wigcap" title="Wigcap" loading="lazy">
                     <p class="nombre">Wigcaps</p>
                     <p class="precio">1,50€</p>
                 </div>
@@ -144,22 +184,22 @@
             <h2>Talleres</h2>
                 <div class="images_talleres">
                 <div class="tarjetas" class="tallerescosturas" >
-                    <img src="Images/Talleres/jovenes_talleres.jpg" alt="Taller de Costura" title="Taller de Costura">
+                    <img src="Images/Talleres/jovenes_talleres.jpg" alt="Taller de Costura" title="Taller de Costura"  loading="lazy">
                     <p class="nombre">Taller de Costura</p>
                     <p class="precio">7,00€</p>
                 </div>
                 <div class="tarjetas" class="tallermakeup" >
-                    <img src="Images/Talleres/taller_makeup.jpg" alt="Taller de Makeup" title="Taller de Makeup">
+                    <img src="Images/Talleres/taller_makeup.jpg" alt="Taller de Makeup" title="Taller de Makeup"  loading="lazy">
                     <p class="nombre">Taller de Makeup</p>
                     <p class="precio">7,00€</p>
                 </div>
                 <div class="tarjetas" class="tallerecostura">
-                    <img src="Images/Talleres/TallerCostura.jpg" alt="Taller de Costura" title="Taller de Costura">
+                    <img src="Images/Talleres/TallerCostura.jpg" alt="Taller de Costura" title="Taller de Costura"  loading="lazy">
                     <p class="nombre">Taller de Costura</p>
                     <p class="precio">7,00€</p>
                 </div>
                 <div class="tarjetas" class="talleretelizacionpelucas" >
-                    <img src="Images/Talleres/taller_estilizacion.png" alt="Taller de Estilización de Pelucas" title="Taller de Estilización de Pelucas">
+                    <img src="Images/Talleres/taller_estilizacion.png" alt="Taller de Estilización de Pelucas" title="Taller de Estilización de Pelucas"  loading="lazy">
                     <p class="nombre">Taller de Estilización de Pelucas</p>
                     <p class="precio">7,00€</p>
                 </div>
@@ -173,47 +213,59 @@
             <button><a href="paginas/serviciopersonalizado.html">Infórmate</a></button>
         </section>
 
+        <div class="contenedor-buscador">
+          <input type="text" class="input-buscador" placeholder="Buscar...">
+          <button class="barrabusqueda" id="boton-buscador">
+            <img src="Images/Iconos/lupa-de-busqueda.png" alt="Buscar">
+          </button>
+          <!-- Menú Inferior que aparecerá cuando haya texto -->
+          <div class="menu-inferior">
+            <ul id="resultados-busqueda">
+              <!-- Los resultados de búsqueda se generarán aquí -->
+            </ul>
+          </div>
+        </div>
 
         <footer>
-    <section class="footer_left">
-        <img src="/Images/Logos/LOGO_BlancoLetras.png" alt="Logo Kyan" title="Logo Kyan">
-        <p>En Kyan nos dedicamos a ofrecer cosplays de calidad a precios accesibles</p>
-        <div class="redes-sociales">
-            <a href="" target="_blank" title="Instagram">
-                <img src="/Images/Logos/LogoInsta.png" alt="Instagram">
-            </a>
-            <a href="" target="_blank" title="TikTok">
-                <img src="/Images/Logos/LogoTikTok.png" alt="TikTok">
-            </a>
-        </div>
-    </section>
-    <section class="footer_mid">
-        <h2>Contacto</h2>
-        <div class="contacto">
-            <p><a href="mailto:kyan09012021@gmail.com">kyan09012021@gmail.com</a></p> 
-            <p>+34 <a href="tel:+34">777 66 63 33</a></p>
-            <p><a href="https://www.google.de/maps/dir//Pg.+de+St.+Joan,+30,+L'Eixample,+08010+Barcelona/@41.3931373,2.1759268,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x12a4a2e489f966b7:0x493ac6f7f5875eaa!2m2!1d2.1785017!2d41.3931373?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D" 
-            target="_blank">C/Passeig Sant Joan, 37, 08010 , Barcelona</a></p>    
-        </div>  
-    </section>
-    <section class="footer_right">
-        <div class="nosotros_footer">
-            <h3>Nosotros</h3>
-            <a href="/paginas/legal/faq.html">Preguntas Frecuentes</a>
-            <br>
-            <a href="/paginas/legal/accesibilidad.html">Accesibilidad</a>
-            <br>
-            <a href="/paginas/legal/newsletter.html">Suscríbete a nuestro boletín</a>
-        </div>
-        <div class="legal">
-            <h3>Terminos Legales</h3>
-            <a href="/paginas/legal/politica-cookies.html">Política de Cookies</a>
-            <br>
-            <a href="/paginas/legal/terminos-condiciones.html">Términos y Condiciones</a>
-            <br>
-            <a href="/paginas/legal/politica-privacidad.html">Política de Privacidad</a>
-        </div>
-    </section>
+            <section class="footer_left">
+                <img src="/Images/Logos/LOGO_BlancoLetras.png" alt="Logo Kyan" title="Logo Kyan"  loading="lazy">
+                <p>En Kyan nos dedicamos a ofrecer cosplays de calidad a precios accesibles</p>
+                <div class="redes-sociales">
+                    <a href="" target="_blank" title="Instagram">
+                        <img src="/Images/Logos/LogoInsta.png" alt="Instagram"  loading="lazy">
+                    </a>
+                    <a href="" target="_blank" title="TikTok">
+                        <img src="/Images/Logos/LogoTikTok.png" alt="TikTok"  loading="lazy">
+                    </a>
+                </div>
+            </section>
+            <section class="footer_mid">
+                <h2>Contacto</h2>
+                <div class="contacto">
+                    <p><a href="mailto:kyan09012021@gmail.com">kyan09012021@gmail.com</a></p> 
+                    <p>+34 <a href="tel:+34">777 66 63 33</a></p>
+                    <p><a href="https://www.google.de/maps/dir//Pg.+de+St.+Joan,+30,+L'Eixample,+08010+Barcelona/@41.3931373,2.1759268,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x12a4a2e489f966b7:0x493ac6f7f5875eaa!2m2!1d2.1785017!2d41.3931373?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D" 
+                    target="_blank">C/Passeig Sant Joan, 37, 08010 , Barcelona</a></p>    
+                </div>  
+            </section>
+            <section class="footer_right">
+                <div class="nosotros_footer">
+                    <h3>Nosotros</h3>
+                    <a href="/paginas/legal/faq.html">Preguntas Frecuentes</a>
+                    <br>
+                    <a href="/paginas/legal/accesibilidad.html">Accesibilidad</a>
+                    <br>
+                    <a href="/paginas/legal/newsletter.html">Suscríbete a nuestro boletín</a>
+                </div>
+                <div class="legal">
+                    <h3>Terminos Legales</h3>
+                    <a href="/paginas/legal/politica-cookies.html">Política de Cookies</a>
+                    <br>
+                    <a href="/paginas/legal/terminos-condiciones.html">Términos y Condiciones</a>
+                    <br>
+                    <a href="/paginas/legal/politica-privacidad.html">Política de Privacidad</a>
+                </div>
+            </section>
         </footer>
         <script src="script.js"></script>
         <script src="scripts/include.js"></script>
