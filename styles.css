@@ -744,3 +744,307 @@ footer  a   {
     font-size: 1.2rem;
     transition: all 0.4s ease-in-out;
 }
+
+@media (max-width: 768px) {
+    *{
+        font-size: 0.9rem;
+    }
+    .navbar{
+        padding: 0rem 2%;
+    }
+    .nav-list{
+        gap: 1rem;
+    }
+    .nav-list li a{
+        font-size: 1rem;
+    }
+    .cesta img{
+        width: 1.2rem;
+    }
+    .sesion{
+        gap: 0.5rem;
+    }
+    .hero{
+        margin: 1rem 2rem;
+        padding: 1rem 0;
+    }
+    .hero h2{
+        font-size: 2rem;
+    }
+    .hero p{
+        font-size: 1rem;
+    }
+    .hero a{
+        font-size: 1rem;
+    }
+    .hero a:hover{
+        color: var(--background-color);
+    }
+
+    .slider_overlay h2 {
+        font-size: 1.5rem;
+    }
+    .slider_overlay p {
+        font-size: 1rem;
+    }
+    .slider_button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+    .slider_overlay {
+        padding: 1rem;
+        padding-bottom: 20rem;
+    }
+    .slider_overlay h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .slider_overlay p {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .slider_overlay button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+    .slider_overlay button:hover {
+        background-color: var(--button-color-cesta);
+        color: var(--light-color);
+        scale: 1.05;
+    }
+/* TARJETAS DE 2 EN 2 EN MÓVIL */
+    .images_cosplays,
+    .images_pelucas,
+    .images_accesorios,
+    .images_talleres {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+        margin-top: 0.7rem;
+    }
+    .tarjetas {
+        padding: 0.4rem;
+        margin-bottom: 0.7rem;
+        min-width: 0;
+    }
+    .images_cosplays img,
+    .images_pelucas img,
+    .images_accesorios img,
+    .images_talleres img {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        height: auto;
+    }
+    .images_talleres img {
+        height: auto;
+    }
+    .servicios_personalizados * {
+        max-width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .footer_right h3{
+        font-size: 1.5rem;
+    }
+    .footer_right a{
+        font-size: 1rem;
+    }
+    .footer_mid h2{
+        font-size: 1.5rem;
+    }
+    .footer_mid p{
+        font-size: 0.9rem;
+    }
+    .footer_right{
+        max-width: 100%;
+    }
+    .footer_left{
+        max-width: 100%;
+        margin-left: 2rem;
+    }
+    .footer_left img{
+        width: 5rem;
+        margin-left: -0.3rem;
+        margin-bottom: -0.6rem;
+    }
+    .footer_left{
+        max-width: 100%;
+    }
+    .footer_left img{
+        width: 5rem;
+        margin-left: -0.3rem;
+        margin-bottom: -0.6rem;
+    }
+    .redes-sociales img{
+        width: 1.5rem;
+        margin-right: 0.6rem;
+    }
+    .redes-sociales img:hover{
+        background-color: var(--light-color);
+        scale: 1.1;
+    }
+    .redes-sociales{
+        margin-top: 1rem;
+    }
+    .footer_mid h2{
+        font-size: 1.5rem;
+    }
+    .footer_mid p{
+        font-size: 0.9rem;
+    }
+    .footer_right{
+        max-width: 100%;
+        margin-right: 2rem;
+    }
+    
+}
+
+
+@media (max-width: 480px) {
+    *{
+        font-size: 0.85rem;
+    }
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.5rem 0.2rem;
+    }
+    nav img {
+        width: 3.2rem;
+    }
+    .navbar {
+        padding: 0;
+    }
+    .nav-list {
+        gap: 0.5rem;
+    }
+    .nav-list li a {
+        font-size: 0.95rem;
+    }
+    .cesta img {
+        width: 1.1rem;
+    }
+    .sesion {
+        gap: 0.3rem;
+    }
+    .hero {
+        margin: 0.5rem 0.2rem;
+        padding: 0.5rem 0;
+    }
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+    .hero p {
+        font-size: 0.95rem;
+    }
+    .hero a {
+        font-size: 0.95rem;
+    }
+    .slider_overlay {
+        padding: 0.5rem;
+        /* padding-bottom eliminado para evitar espacio en blanco */
+    }
+    .slider_overlay h2 {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+    .slider_overlay p {
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+    }
+    .slider_button {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.7rem;
+    }
+    /* SUBIR LAS FLECHAS DEL SLIDER EN MÓVIL */
+    .slider_arrows {
+        top: 35% !important;
+    }
+    .slider_arrow {
+        font-size: 1.5rem !important;
+    }
+    /* TARJETAS DE 2 EN 2 EN MÓVIL PEQUEÑO */
+    .images_cosplays,
+    .images_pelucas,
+    .images_accesorios,
+    .images_talleres {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.4rem;
+        margin-top: 0.4rem;
+    }
+    .tarjetas {
+        padding: 0.25rem;
+        margin-bottom: 0.4rem;
+        min-width: 0;
+    }
+    .images_cosplays img,
+    .images_pelucas img,
+    .images_accesorios img,
+    .images_talleres img {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        height: auto;
+    }
+    .images_talleres img {
+        height: auto;
+    }
+    .servicios_personalizados * {
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+    .footer_right h3 {
+        font-size: 1.1rem;
+    }
+    .footer_right a {
+        font-size: 0.9rem;
+    }
+    .footer_mid h2 {
+        font-size: 1.1rem;
+    }
+    .footer_mid p {
+        font-size: 0.85rem;
+    }
+    .footer_right {
+        max-width: 100%;
+        margin-right: 0.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .footer_left {
+        max-width: 100%;
+        margin-left: 0.5rem;
+    }
+    .footer_left img {
+        width: 2.5rem;
+        margin-left: -0.1rem;
+        margin-bottom: -0.3rem;
+    }
+    .redes-sociales img {
+        width: 1.2rem;
+        margin-right: 0.3rem;
+    }
+    .redes-sociales {
+        margin-top: 0.5rem;
+    }
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0.5rem 0.2rem 1rem 0.2rem;
+    }
+    /* Buscador flotante */
+    .contenedor-buscador {
+        right: 8px;
+        bottom: 8px;
+        padding: 0.3rem 0.2rem;
+        width: 25px;
+        min-width: 25px;
+    }
+    .contenedor-buscador.activo {
+        width: 120px !important;
+        min-width: 120px !important;
+    }
+}
